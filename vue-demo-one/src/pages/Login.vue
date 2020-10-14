@@ -1,7 +1,6 @@
 <template>
 	<div>
-		<!-- 指定路由的出口 -->
-		<router-view></router-view>
+		<hm-header>登录</hm-header>
 	</div>
 </template>
 
