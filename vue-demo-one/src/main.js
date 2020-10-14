@@ -12,10 +12,12 @@ import 'lib-flexible'
 // 引入子组件
 import HmHeader from './components/HmHeader.vue'
 import HmLogo from './components/HmLogo.vue'
+import HmButton from './components/HmButton.vue'
 
 // 注册全局组件
 Vue.component('hm-header', HmHeader)
 Vue.component('hm-logo', HmLogo)
+Vue.component('hm-button', HmButton)
 new Vue({
     router,
     render: (h) => h(App),
