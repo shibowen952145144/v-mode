@@ -1,6 +1,8 @@
 // 配置路由信息
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+// 导入路由组件
+// import axios from 'axios'
 // 导入组件
 import Login from '../pages/Login.vue'
 import Register from '../pages/Register.vue'
