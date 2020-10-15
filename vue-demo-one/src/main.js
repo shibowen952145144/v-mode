@@ -18,8 +18,9 @@ Vue.component('hm-header', HmHeader)
 Vue.component('hm-logo', HmLogo)
 Vue.component('hm-button', HmButton)
 
-import { Field } from 'vant'
+import { Field, Toast } from 'vant'
 Vue.use(Field)
+Vue.use(Toast)
 
 new Vue({
     router,

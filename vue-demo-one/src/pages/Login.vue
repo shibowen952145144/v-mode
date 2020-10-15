@@ -26,6 +26,12 @@
 		/>
 
 		<hm-button @click.native="startLogin">登录</hm-button>
+		<div class="registe">
+			<span>未注册的用户到这里</span>
+			<router-link class="link" to="/register">
+				注册新用户
+			</router-link>
+		</div>
 	</div>
 </template>
 
@@ -56,7 +62,7 @@ export default {
 		},
 		// 密码的校验
 		inputPassword() {
-			let reg = /^\d{1,3}$/
+			let reg = /^\d{1,5}$/
 			if (reg.test(this.password)) {
 				this.passwordErrMsg = ''
 			} else {
@@ -82,11 +88,11 @@ export default {
 					.then((res) => {
 						// console.log(res)
 						if (res.data.statusCode === 200) {
-							alert('登录成功')
+							this.$toast.success('登录成功')
 							// 跳转到  个人中心
 							this.$router.push('/user')
 						} else {
-							alert('登录失败')
+							this.$toast.fail('登录失败')
 						}
 					})
 			} else {
@@ -98,5 +104,14 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.registe {
+	color: #cccccc;
+	font-size: 14px;
+	text-align: right;
+	padding: 0 10px;
+	.link {
+		color: aquamarine;
+	}
+}
 // 添加自己的样式   确保样式不被其他（hmheader.vue）里面的样式所影响
 </style>
