@@ -18,6 +18,11 @@ Vue.component('hm-header', HmHeader)
 Vue.component('hm-logo', HmLogo)
 Vue.component('hm-button', HmButton)
 
+// 同一处理Axios
+// import axios from 'axios'
+// axios.defaults.baseURL = 'http://localhost:3000'
+// Vue.Prototype.$axios = axios
+
 import { Field, Toast } from 'vant'
 Vue.use(Field)
 Vue.use(Toast)
